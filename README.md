@@ -11,11 +11,11 @@ Possuir uma interface que vise ser fácil uso e intuitiva.
 
 # 📖 Tópicos/Checklist
 
-[x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop.
-[] Usar componentes de algum framework CSS (Bootstrap, Materialize ou outro).
-[] Apresentar as telas com layout responsivo usando ou não algum framework CSS.
-[] Construir páginas web com o conceito de componentes. 
-[] Criar o layout da aplicação com componentes, ou seja, o cabeçalho e rodapé precisam ser componentes.
+[x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop. <br>
+[] Usar componentes de algum framework CSS (Bootstrap, Materialize ou outro). <br>
+[] Apresentar as telas com layout responsivo usando ou não algum framework CSS. <br>
+[] Construir páginas web com o conceito de componentes. <br>
+[] Criar o layout da aplicação com componentes, ou seja, o cabeçalho e rodapé precisam ser componentes. <br>
 [] Usar pelo menos dois tipos de data-binding (Interpolation, Property Binding, Event Binding e Two Way Data Binding).
 [] Passar dados via hierarquia de componentes, ou seja, usando @Input ou @Output.
 [] Mapear componentes à rotas no módulo de rotas.
