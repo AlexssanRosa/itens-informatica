@@ -9,6 +9,9 @@ Cadastro de itens com campos como nome, marca, tipo, quantidade, data de aquisi�
 Permitir lista itens existentes; 
 Possuir uma interface que vise ser fácil uso e intuitiva. 
 
+# Link Protótipos de Tela
+https://www.figma.com/proto/QLgj9YwBjtwBD6avYhWsKS/Untitled?type=design&node-id=1-2&t=TSF273P2F2tc9P8V-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2
+
 # 📖 Tópicos/Checklist
 
 [x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop. <br>
