@@ -15,12 +15,13 @@ https://www.figma.com/proto/QLgj9YwBjtwBD6avYhWsKS/Untitled?type=design&node-id=
 # Como Executar o Projeto
 É obrigatório ter o Node.js instalado na máquina, antes de começar verifique se ele está instalado.
 
-1.Clone o repositório com a branch desejada em seu ambiente local:
+1.Clone o repositório com a branch desejada em seu ambiente local.
 
 2.Instale as dependências necessárias utilizando o npm:
 ```bash
 npm install
 ```
+3. Execute o projeto.
 
 # 📖 Tópicos/Checklist
 
