@@ -12,6 +12,16 @@ Possuir uma interface que vise ser fácil uso e intuitiva.
 # Link Protótipos de Tela
 https://www.figma.com/proto/QLgj9YwBjtwBD6avYhWsKS/Untitled?type=design&node-id=1-2&t=TSF273P2F2tc9P8V-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2
 
+# Como Executar o Projeto
+É obrigatório ter o Node.js instalado na máquina, antes de começar verifique se ele está instalado.
+
+1. Clone o repositório com a branch desejada em seu ambiente local:
+
+2.Instale as dependências necessárias utilizando o npm:
+```bash
+npm install
+```
+
 # 📖 Tópicos/Checklist
 
 [x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop. <br>
