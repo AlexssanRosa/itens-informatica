@@ -15,14 +15,7 @@ https://www.figma.com/proto/QLgj9YwBjtwBD6avYhWsKS/Untitled?type=design&node-id=
 # Como Executar o Projeto
 É obrigatório ter o Node.js instalado na máquina, antes de começar verifique se ele está instalado.
 
-
-1. Clone o repositório em seu ambiente local:
-```bash
-git clone -b feature/atividade-07 git@github.com:AlexssanRosa/itens-informatica.git
-```
-```bash
-cd itens-informatica/itens-informatica
-```
+1. Clone o repositório com a branch desejada em seu ambiente local:
 
 2.Instale as dependências necessárias utilizando o npm:
 ```bash
