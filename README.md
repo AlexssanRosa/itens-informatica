@@ -21,7 +21,7 @@ https://www.figma.com/proto/QLgj9YwBjtwBD6avYhWsKS/Untitled?type=design&node-id=
 ```bash
 npm install
 ```
-3. Execute o projeto.
+3.Execute o projeto.
 
 # 📖 Tópicos/Checklist
 
