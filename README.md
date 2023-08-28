@@ -40,6 +40,6 @@ npm install
 <br>[] Fazer requisições a API com tratamento da resposta com Promises ou Observables. 
 <br>[] Cadastrar uma entidade usando uma API (JSON Server). 
 <br>[] Apresentar uma lista de dados com a diretiva estrutural ngFor. 
-<br>[] Usar a diretiva ngIf. 
+<br>[X] Usar a diretiva ngIf. 
 <br>[] Formatar a apresentação de dados com Pipes. 
 <br>[] Build e deploy da aplicação.
