@@ -8,10 +8,13 @@ import * as M from 'materialize-css'
 export class AppComponent {
   title = 'itens-informatica';
   FlowText = 'flow-text';
-  conteudo: string;
-  constructor() {
-    this.conteudo = 'O Conteúdo da página ainda está em desenvolvimento';
+  habilitado = true;
+  conteudo = 'O Conteudo do site ainda esta em desenvolvimento.';
+  disableMessage(desabilitar: boolean) {
+    this.habilitado = desabilitar;
   }
+
+
 }
 document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.sidenav');

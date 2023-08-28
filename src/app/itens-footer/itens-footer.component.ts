@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-itens-footer',
@@ -6,10 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./itens-footer.component.css']
 })
 export class ItensFooterComponent {
-  nome: String;
+  nome = 'Alexssandro Rosa';
 
-  constructor() {
-    this.nome = 'Alexssandro Rosa'
+
+  constructor(private router: Router) {
   }
 
 

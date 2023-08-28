@@ -4,17 +4,31 @@
     <a href="#" class="brand-logo hide-on-med-and-down">Controle de Itens de Informática</a>
     <a href="#" class="brand-logo hide-on-large-only">Bem-Vindo</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="#">Novo</a></li>
-      <li><a href="#">Consultar</a></li>
-      <li><a href="#">Listar Itens</a></li>
+      <li *ngIf="!searching"><a routerLink="cadastro" (click)="disableMessage(false)">Novo</a></li>
+      <li *ngIf="!searching"><a routerLink="listagem" (click)="disableMessage(false)">Listar Itens</a></li>
+      <li *ngIf="!searching"><a (click)="toggleSearch()">Consultar</a></li>
+      <li>
+        <div class="input-field" *ngIf="searching">
+          <input placeholder="Pesquisa" [(ngModel)]="conteudo" type="text">
+        </div>
+      </li>
+      <li *ngIf="searching"><a (click)="pesquisa()">Pesquisar</a></li>
+      <li *ngIf="searching"><a (click)="cancelSearch()">Cancelar</a></li>
     </ul>
   </div>
 </nav>
 
 
 <ul class="sidenav green accent-4" id="mobile-demo">
-  <li><a href="#">Novo</a></li>
-  <li><a href="#">Consultar</a></li>
-  <li><a href="#">Listar Itens</a></li>
+  <li><a routerLink="cadastro">Novo</a></li>
+  <li><a routerLink="listagem">Listar Itens</a></li>
+  <li *ngIf="!searching"><a (click)="toggleSearch()">Consultar</a></li>
+  <li>
+    <div class="input-field" *ngIf="searching">
+      <input placeholder="Pesquisa" [(ngModel)]="conteudo" type="text">
+    </div>
+  </li>
+  <li *ngIf="searching"><a (click)="pesquisa()">Pesquisar</a></li>
+  <li *ngIf="searching"><a (click)="cancelSearch()">Cancelar</a></li>
 </ul>
 
