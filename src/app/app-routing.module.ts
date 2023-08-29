@@ -4,6 +4,7 @@ import { NewItensComponent } from './new-itens/new-itens.component';
 import { ListItensComponent } from './list-itens/list-itens.component';
 
 
+
 const routes: Routes = [
   { path: 'cadastro', component: NewItensComponent },
   { path: 'listagem', component: ListItensComponent },

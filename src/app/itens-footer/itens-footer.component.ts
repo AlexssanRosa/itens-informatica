@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./itens-footer.component.css']
 })
 export class ItensFooterComponent {
-  nome = 'Alexssandro Rosa';
+  @Input() desenvolvedor = '';
 
 
   constructor(private router: Router) {

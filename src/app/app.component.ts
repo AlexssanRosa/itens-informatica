@@ -8,6 +8,7 @@ import * as M from 'materialize-css'
 export class AppComponent {
   title = 'itens-informatica';
   FlowText = 'flow-text';
+  nome = 'Alexssandro Rosa';
   habilitado = true;
   conteudo = 'O Conteudo do site ainda esta em desenvolvimento.';
   disableMessage(desabilitar: boolean) {
