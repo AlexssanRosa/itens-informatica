@@ -67,7 +67,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
     }
     else {
       this.erros[1] = true;
-      this.aviso_marca = "A Marca deve conter apenas letras e numeros sem acentos / Não pode ser vazio";
+      this.aviso_marca = "A Marca deve conter apenas letras e numeros/ Não pode ser vazio";
     }
 
   }
