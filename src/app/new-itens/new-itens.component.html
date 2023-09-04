@@ -5,13 +5,14 @@
     <div class="row">
         <div class="col s12">
          <div class="card-panel">
-            <form>
+            <form #form="ngForm" (submit)="Enviar()">
                 <div class="row">
                         <div class="center-align col s6">
                             <p class="center-align">Nome:</p>
                         </div>
                         <div class="col s6">
-                            <input placeholder="Nome" id="nome" type="text" class="validate ">      
+                            <input placeholder="Nome" id="nome" type="text" name="nome" [(ngModel)]="itens.nome" required (input)="validanome()">
+                            <span class="error-message" *ngIf="erros[0]">{{aviso_nome}}</span>      
                         </div> 
                 </div>
                 <div class="row">
@@ -19,7 +20,8 @@
                             <p class="center-align">Marca:</p>
                         </div>
                         <div class="col s6">
-                            <input placeholder="Marca" id="marca" type="text" class="validate ">      
+                            <input placeholder="Marca" id="marca" type="text" name="marca" [(ngModel)]="itens.marca" required (input)="validamarca()">
+                            <span class="error-message" *ngIf="erros[1]">{{aviso_marca}}</span>         
                         </div> 
                 </div>
                 <div class="row">
@@ -27,7 +29,8 @@
                             <p class="center-align">Tipo:</p>
                         </div>
                         <div class="col s6">
-                            <input placeholder="Tipo" id="tipo" type="text" class="validate ">      
+                            <input placeholder="Tipo" id="tipo" type="text" name="tipo" [(ngModel)]="itens.tipo" required (input)="validatipo()"> 
+                            <span class="error-message" *ngIf="erros[2]">{{aviso_tipo}}</span>       
                         </div> 
                 </div>
                 <div class="row">         
@@ -35,7 +38,8 @@
                             <p class="center-align">Quantidade:</p>
                         </div>
                         <div class="col s6">
-                            <input placeholder="Quantidade" id="qtd" type="text" class="validate ">      
+                            <input placeholder="Quantidade" id="qtd" type="text" name="qtd" [(ngModel)]="itens.qtd" required (input)="validaqtd()"> 
+                            <span class="error-message" *ngIf="erros[3]">{{aviso_qtd}}</span>      
                         </div>  
                 </div>
                 <div class="row">
@@ -43,15 +47,16 @@
                             <p class="center-align">Data Aquisição:</p>
                         </div>
                         <div class="col s6">
-                            <input placeholder="Data Aquisição" id="data" type="date" class="validate ">      
+                            <input placeholder="dd/mm/yyyy" id="data" type="text" name="data" [(ngModel)]="itens.data" required (input)="validadata()">
+                            <span class="error-message" *ngIf="erros[4]">{{aviso_data}}</span>     
                         </div>      
                 </div>
                 <div class="row">
                     <div class="center-align col s6">
-                        <a class="waves-effect waves-light btn green accent-4">Salvar</a>
+                        <button class="waves-effect waves-light btn green accent-4" [disabled]="desabilita()">Salvar</button>
                     </div>
                     <div class="center center-align s6">
-                        <a class="waves-effect waves-light btn green accent-4">Limpar</a>
+                        <button class="waves-effect waves-light btn green accent-4" (click)="limparCampos()" type="button">Limpar</button>
                     </div>  
                 </div>
             </form>

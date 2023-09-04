@@ -1,5 +1,7 @@
+import { ItemService } from './../new-itens/item.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Item } from '../model/Item';
 
 @Component({
   selector: 'app-list-itens',
@@ -9,14 +11,34 @@ import { ActivatedRoute } from '@angular/router';
 export class ListItensComponent implements OnInit {
   achou = false;
   conteudo = '';
-  constructor(private route: ActivatedRoute) { }
+  itens: Item[] = [];
+  constructor(private route: ActivatedRoute, private itemService: ItemService, private router: Router) { }
+
+  popularTabela() {
+    this.itens = this.itemService.getItem();
+  }
+
+  apagar(item: Item) {
+    this.itemService.deletarItem(item);
+    this.popularTabela();
+  }
+
+  editar(item: Item) {
+    this.itemService.setEditavel(item);
+    this.router.navigate(['/cadastro']);
+  }
 
   ngOnInit() {
+
     this.route.paramMap.subscribe(params => {
       const resultado = params.get('busca');
       if (resultado != null) {
         this.conteudo = resultado.toString();
         this.achou = true;
+        this.itens = this.itemService.getItemNome(this.conteudo);
+      }
+      else {
+        this.itens = this.itemService.getItem();
       }
     });
   }

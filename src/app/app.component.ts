@@ -10,7 +10,7 @@ export class AppComponent {
   FlowText = 'flow-text';
   nome = 'Alexssandro Rosa';
   habilitado = true;
-  conteudo = 'O Conteudo do site ainda esta em desenvolvimento.';
+  conteudo = 'Seja bem vindo ao site, para navegar utilize os menus, aqui é possível cadastrar, consultar, alterar e excluir seus itens de informática';
   disableMessage(desabilitar: boolean) {
     this.habilitado = desabilitar;
   }
