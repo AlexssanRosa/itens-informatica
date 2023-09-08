@@ -37,8 +37,8 @@ npm install
 <br>[X] Passar dados entre componentes que representam diferentes telas via parâmetros de rotas. 
 <br>[X] Validar campos do formulário com REGEX e apresentar os erros. 
 <br>[X] Desabilitar o botão de submit enquanto o formulário está inválido. 
-<br>[] Fazer requisições a API com tratamento da resposta com Promises ou Observables. 
-<br>[] Cadastrar uma entidade usando uma API (JSON Server). 
+<br>[X] Fazer requisições a API com tratamento da resposta com Promises ou Observables. 
+<br>[X] Cadastrar uma entidade usando uma API (JSON Server). 
 <br>[X] Apresentar uma lista de dados com a diretiva estrutural ngFor. 
 <br>[X] Usar a diretiva ngIf. 
 <br>[] Formatar a apresentação de dados com Pipes. 
