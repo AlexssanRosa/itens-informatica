@@ -3,6 +3,7 @@ import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import * as M from 'materialize-css';
 import { Item } from '../model/Item';
+import { ItemApiService } from './item.api.service';
 
 @Component({
   selector: 'app-new-itens',
@@ -21,7 +22,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
   bloquear = true;
   todos: Item[] = [];
   editavel: any;
-  constructor(private itemService: ItemService) { }
+  constructor(private api: ItemApiService) { }
   edicao = false;
 
   itens: Item = {
@@ -34,8 +35,8 @@ export class NewItensComponent implements OnInit, AfterViewInit {
   };
 
   ngOnInit(): void {
-    this.todos = this.itemService.getItem();
-    this.editavel = this.itemService.getEditavel();
+    this.api.getItens().then((itens) => { this.todos = itens; })
+    this.editavel = this.api.getEditavel();
     if (this.editavel.id != 0) {
       this.itens.id = this.editavel.id;
       this.itens.nome = this.editavel.nome;
@@ -126,7 +127,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
     this.aviso_tipo = '';
     this.aviso_qtd = '';
     this.aviso_data = '';
-    this.itemService.setEditavel(this.itens);
+    this.api.setEditavel(this.itens);
     this.edicao = false;
 
   }
@@ -134,7 +135,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
   Enviar() {
     //Atualizar Itens
     if (this.edicao === true) {
-      this.itemService.atualizarItem(this.itens);
+      this.api.atualizarItem(this.itens,);
       M.toast({
         html: 'Item atualizado com sucesso!',
         classes: 'green lighten-2 white-text'
@@ -149,7 +150,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
       else {
         this.itens.id = this.todos[this.todos.length - 1].id + 1;
       }
-      this.itemService.salvarItem(this.itens);
+      this.api.salvarItem(this.itens);
       M.toast({
         html: 'Item cadastro com sucesso!',
         classes: 'green lighten-2 white-text'

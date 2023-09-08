@@ -8,6 +8,7 @@ import { ItensHeaderComponent } from './itens-header/itens-header.component';
 import { NewItensComponent } from './new-itens/new-itens.component';
 import { ListItensComponent } from './list-itens/list-itens.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

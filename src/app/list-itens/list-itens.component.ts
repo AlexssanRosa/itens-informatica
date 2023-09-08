@@ -1,3 +1,4 @@
+import { ItemApiService } from './../new-itens/item.api.service';
 import { ItemService } from './../new-itens/item.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -12,19 +13,19 @@ export class ListItensComponent implements OnInit {
   achou = false;
   conteudo = '';
   itens: Item[] = [];
-  constructor(private route: ActivatedRoute, private itemService: ItemService, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router, private api: ItemApiService) { }
 
   popularTabela() {
-    this.itens = this.itemService.getItem();
+    this.api.getItens().then((itens) => { this.itens = itens; })
   }
 
   apagar(item: Item) {
-    this.itemService.deletarItem(item);
+    this.api.deletarItem(item);
     this.popularTabela();
   }
 
   editar(item: Item) {
-    this.itemService.setEditavel(item);
+    this.api.setEditavel(item);
     this.router.navigate(['/cadastro']);
   }
 
@@ -35,10 +36,10 @@ export class ListItensComponent implements OnInit {
       if (resultado != null) {
         this.conteudo = resultado.toString();
         this.achou = true;
-        this.itens = this.itemService.getItemNome(this.conteudo);
+        this.api.getItemNome(this.conteudo).then((item) => { this.itens = item; })
       }
       else {
-        this.itens = this.itemService.getItem();
+        this.api.getItens().then((itens) => { this.itens = itens; })
       }
     });
   }
