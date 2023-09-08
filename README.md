@@ -17,11 +17,18 @@ https://www.figma.com/proto/QLgj9YwBjtwBD6avYhWsKS/Untitled?type=design&node-id=
 
 1.Clone o repositório com a branch desejada em seu ambiente local.
 
-2.Instale as dependências necessárias utilizando o npm:
+2.Instale as dependências utilizando o npm:
 ```bash
 npm install
 ```
-3.Execute o projeto.
+3.Inicie o Json Server:
+```bash
+json-server --watch db.json
+```
+4.Execute o Aplicativo:
+```bash
+ng serve --open
+```
 
 # 📖 Tópicos/Checklist
 
