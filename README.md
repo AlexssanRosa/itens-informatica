@@ -1,27 +1,34 @@
-# ItensInformatica
+# itens-informatica
+Controle de Itens de Informática
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
+# Descrição
+Uma aplicação que permite com que uma empresa consiga manter o controle da quantidade e dos itens de informática que possui para uso. O usuário poderá cadastrar os itens com as quantidades, consultar, entre outros. 
 
-## Development server
+# Funcionalidades
+Cadastro de itens com campos como nome, marca, tipo, quantidade, data de aquisição; 
+Permitir lista itens existentes; 
+Possuir uma interface que vise ser fácil uso e intuitiva. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Link Protótipos de Tela
+https://www.figma.com/proto/QLgj9YwBjtwBD6avYhWsKS/Untitled?type=design&node-id=1-2&t=TSF273P2F2tc9P8V-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2
 
-## Code scaffolding
+# 📖 Tópicos/Checklist
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop. <br>
+[] Usar componentes de algum framework CSS (Bootstrap, Materialize ou outro). <br>
+[] Apresentar as telas com layout responsivo usando ou não algum framework CSS. <br>
+[] Construir páginas web com o conceito de componentes. <br>
+[] Criar o layout da aplicação com componentes, ou seja, o cabeçalho e rodapé precisam ser componentes. <br>
+[] Usar pelo menos dois tipos de data-binding (Interpolation, Property Binding, Event Binding e Two Way Data Binding). 
+<br>[] Passar dados via hierarquia de componentes, ou seja, usando @Input ou @Output. 
+<br>[] Mapear componentes à rotas no módulo de rotas. 
+<br>[] Criar navegação entre páginas por meio de rotas. 
+<br>[] Passar dados entre componentes que representam diferentes telas via parâmetros de rotas. 
+<br>[] Validar campos do formulário com REGEX e apresentar os erros. 
+<br>[] Desabilitar o botão de submit enquanto o formulário está inválido. 
+<br>[] Fazer requisições a API com tratamento da resposta com Promises ou Observables. 
+<br>[] Cadastrar uma entidade usando uma API (JSON Server). 
+<br>[] Apresentar uma lista de dados com a diretiva estrutural ngFor. 
+<br>[] Usar a diretiva ngIf. 
+<br>[] Formatar a apresentação de dados com Pipes. 
+<br>[] Build e deploy da aplicação.
