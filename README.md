@@ -48,5 +48,5 @@ ng serve --open
 <br>[X] Cadastrar uma entidade usando uma API (JSON Server). 
 <br>[X] Apresentar uma lista de dados com a diretiva estrutural ngFor. 
 <br>[X] Usar a diretiva ngIf. 
-<br>[] Formatar a apresentação de dados com Pipes. 
+<br>[X] Formatar a apresentação de dados com Pipes. 
 <br>[] Build e deploy da aplicação.
