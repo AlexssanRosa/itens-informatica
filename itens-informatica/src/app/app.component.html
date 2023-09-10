@@ -1,0 +1,15 @@
+<header>
+  <app-itens-header (disable)="disableMessage($event)"></app-itens-header>
+</header>
+
+
+<main>
+  <body style="overflow: auto">
+    <p *ngIf="habilitado" [class]="this.FlowText">{{conteudo}}</p>
+    <router-outlet></router-outlet>
+  </body>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+</main>
+
+
+<app-itens-footer [desenvolvedor]="nome"></app-itens-footer>

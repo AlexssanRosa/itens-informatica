@@ -1,0 +1,9 @@
+.btn-large {
+    border-radius: 10px;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+p {
+    font-size: 18px;
+}
