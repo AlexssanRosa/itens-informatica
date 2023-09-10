@@ -2,7 +2,7 @@
   "itens": [
     {
       "id": 1,
-      "nome": "mouse",
+      "nome": "Mouse",
       "marca": "Gamer",
       "tipo": "periférico",
       "qtd": "5",
