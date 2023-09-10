@@ -35,7 +35,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
   };
 
   ngOnInit(): void {
-    this.api.getItens().then((itens) => { this.todos = itens; })
+    this.api.getItens().subscribe((itens: Item[]) => { this.todos = itens; });
     this.editavel = this.api.getEditavel();
     if (this.editavel.id != 0) {
       this.itens.id = this.editavel.id;
@@ -135,7 +135,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
   Enviar() {
     //Atualizar Itens
     if (this.edicao === true) {
-      this.api.atualizarItem(this.itens,);
+      this.api.atualizarItem(this.itens).subscribe(item => this.todos.push(item));
       M.toast({
         html: 'Item atualizado com sucesso!',
         classes: 'green lighten-2 white-text'
@@ -150,7 +150,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
       else {
         this.itens.id = this.todos[this.todos.length - 1].id + 1;
       }
-      this.api.salvarItem(this.itens);
+      this.api.salvarItem(this.itens).subscribe(item => this.todos.push(item));
       M.toast({
         html: 'Item cadastro com sucesso!',
         classes: 'green lighten-2 white-text'

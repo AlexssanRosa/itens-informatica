@@ -1,47 +1,48 @@
 import { Item } from './../model/Item';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { lastValueFrom } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, from, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemApiService {
+
+  constructor(private http: HttpClient) { }
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    })
+  };
   url = 'http://localhost:3000/itens';
   editavel: any;
 
-  constructor() { }
 
-  getItens(): Promise<Item[]> {
-    return fetch(this.url)
-      .then((response) => response.json());
+
+
+  getItens(): Observable<Item[]> {
+    return this.http.get<Item[]>(this.url);
   }
 
-  salvarItem(item: Item): Promise<Item[]> {
-    return fetch(this.url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(item),
-    }).then((response) => response.json());
+  salvarItem(item: Item): Observable<Item> {
+    return this.http.post<Item>(this.url, item, this.httpOptions);
   }
 
-  atualizarItem(item: Item): Promise<any> {
+  //é utlizado um retorno any para que possa ser usado o subscribe mais facilmente no componete list-itens
+  deletarItem(item: Item): Observable<any> {
     const url = `${this.url}/${item.id}`;
-    return fetch(url, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(item),
-    }).then((response) => response.json());
+    return this.http.delete(url, this.httpOptions);
   }
 
-  getItemNome(nome: string): Promise<Item[]> {
+  atualizarItem(item: Item): Observable<Item> {
+    const url = `${this.url}/${item.id}`;
+    return this.http.put<Item>(url, item, this.httpOptions);
+  }
+
+  getItemNome(nome: string): Observable<Item[]> {
     const url = `${this.url}?nome=${nome}`;
-    return fetch(url)
-      .then((response) => response.json());
+    return this.http.get<Item[]>(url);
+
   }
 
   setEditavel(item: Item) {
@@ -52,12 +53,7 @@ export class ItemApiService {
     return this.editavel;
   }
 
-  deletarItem(item: Item) {
-    const url = `${this.url}/${item.id}`;
-    fetch(url, {
-      method: 'DELETE',
-    }).then(() => null);
-  }
+
 
 }
 

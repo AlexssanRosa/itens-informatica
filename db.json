@@ -2,27 +2,19 @@
   "itens": [
     {
       "id": 1,
-      "nome": "Teclado",
+      "nome": "mouse",
       "marca": "Gamer",
       "tipo": "periférico",
-      "qtd": "1",
+      "qtd": "5",
       "data": "14/12/2022"
     },
     {
       "id": 2,
-      "nome": "Mouse",
-      "marca": "Logitech",
-      "tipo": "periférico",
-      "qtd": 3,
-      "data": "14/12/2022"
-    },
-    {
-      "id": 4,
-      "nome": "Notebook",
-      "marca": "Lenovo",
+      "nome": "Monitor",
+      "marca": "AOC",
       "tipo": "Hardware",
-      "qtd": "1",
-      "data": "05/12/2022"
+      "qtd": "2",
+      "data": "22/01/2023"
     }
   ]
 }
