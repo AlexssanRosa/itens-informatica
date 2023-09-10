@@ -18,7 +18,7 @@ export class ItemApiService {
   editavel: any;
 
 
-
+  //Service utiliza observable com subscribe nos componentes que listam  ou preenchem dados
 
   getItens(): Observable<Item[]> {
     return this.http.get<Item[]>(this.url);

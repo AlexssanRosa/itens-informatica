@@ -12,6 +12,7 @@ export class ItensHeaderComponent {
   conteudo = '';
   constructor(private router: Router) { }
 
+  //Funções para habilitar e desabilitar consulta e mensagem da tela de inicio
   toggleSearch() {
     this.searching = true;
   }
@@ -24,6 +25,7 @@ export class ItensHeaderComponent {
     this.disable.emit(value);
   }
 
+  //passa conteudo via navegação de rotas
   pesquisa() {
     this.router.navigate(['/listagem', this.conteudo]);
     this.conteudo = '';

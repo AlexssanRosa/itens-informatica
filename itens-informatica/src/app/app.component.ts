@@ -11,6 +11,7 @@ export class AppComponent {
   nome = 'Alexssandro Rosa';
   habilitado = true;
   conteudo = 'Seja bem vindo ao site, para navegar utilize os menus, aqui é possível cadastrar, consultar, alterar e excluir seus itens de informática';
+  //Recebe via output para desabilitar componente quando sai da tela inicial
   disableMessage(desabilitar: boolean) {
     this.habilitado = desabilitar;
   }

@@ -12,7 +12,7 @@ import { ItemApiService } from './item.api.service';
 })
 export class NewItensComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('form') form!: NgForm;
+  @ViewChild('form') form!: NgForm; //declaracao do ng form
   erros: boolean[] = [true, true, true, true, true];
   aviso_nome = '';
   aviso_marca = '';
@@ -23,7 +23,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
   todos: Item[] = [];
   editavel: any;
   constructor(private api: ItemApiService) { }
-  edicao = false;
+  edicao = false; //variavel de apoio para habilitar ou desabilitar o botao de envio
 
   itens: Item = {
     id: 0,
@@ -37,7 +37,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.api.getItens().subscribe((itens: Item[]) => { this.todos = itens; });
     this.editavel = this.api.getEditavel();
-    if (this.editavel.id != 0) {
+    if (this.editavel.id != 0) { //quando recebe um item para edicao ele atualiza a tela de form com as informacoes
       this.itens.id = this.editavel.id;
       this.itens.nome = this.editavel.nome;
       this.itens.marca = this.editavel.marca;
@@ -53,6 +53,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
     M.updateTextFields();
   }
 
+  //validacoes com regex
   validanome() {
     if ((this.itens.nome.match(/^[a-zA-Z0-9À-ÖØ-öø-ÿ\s]+$/)) && this.itens.nome.length > 0) {
       this.erros[0] = false;
@@ -101,6 +102,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
 
   }
 
+  //funcao para verificar se desabilita ou nao o botao de enviar
   desabilita() {
     if (this.erros.every(value => value === false)) {
       return false;
@@ -110,7 +112,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
     }
   }
 
-
+  //Funcao de limpar os campos
   limparCampos() {
     this.form.reset;
     this.erros = [true, true, true, true, true];
@@ -132,6 +134,7 @@ export class NewItensComponent implements OnInit, AfterViewInit {
 
   }
 
+  //botao de enviar comeca desabilitado e só é liberado quando esta tudo certo
   Enviar() {
     //Atualizar Itens
     if (this.edicao === true) {
