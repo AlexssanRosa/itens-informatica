@@ -7,6 +7,14 @@
       "tipo": "periférico",
       "qtd": "5",
       "data": "14/12/2023"
+    },
+    {
+      "id": 2,
+      "nome": "Monitor",
+      "marca": "AOC",
+      "tipo": "Hardware",
+      "qtd": "1",
+      "data": "21/02/2022"
     }
   ]
 }
