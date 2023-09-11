@@ -29,6 +29,22 @@ json-server --watch db.json
 ```bash
 ng serve --open
 ```
+# Link GitHub Pages
+
+Importante: Antes de executar o projeot clone a branch main em seu ambiente local e execute:
+
+Instala Dependências
+
+```bash
+npm install
+```
+Inicia o Servidor Json para que a aplicação funcione
+
+```bash
+json-server --watch db.json
+```
+
+Link para acessar: https://alexssanrosa.github.io/itens-informatica/
 
 # 📖 Tópicos/Checklist
 
@@ -49,4 +65,4 @@ ng serve --open
 <br>[X] Apresentar uma lista de dados com a diretiva estrutural ngFor. 
 <br>[X] Usar a diretiva ngIf. 
 <br>[X] Formatar a apresentação de dados com Pipes. 
-<br>[] Build e deploy da aplicação.
+<br>[X] Build e deploy da aplicação.
