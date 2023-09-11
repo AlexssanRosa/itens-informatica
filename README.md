@@ -31,7 +31,7 @@ ng serve --open
 ```
 # Link GitHub Pages
 
-Importante: Antes de executar o projeot clone a branch main em seu ambiente local e execute:
+Importante: Antes de executar o projeto clone a branch main em seu ambiente local e execute:
 
 Instala Dependências
 
