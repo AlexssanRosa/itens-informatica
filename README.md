@@ -46,6 +46,10 @@ json-server --watch db.json
 
 Link para acessar: https://alexssanrosa.github.io/itens-informatica/
 
+# Link Vídeo Apresentação Projeto
+
+Link Video Apresentação: https://www.youtube.com/watch?v=YGBm5bHHp4Y
+
 # 📖 Tópicos/Checklist
 
 [x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop. <br>
